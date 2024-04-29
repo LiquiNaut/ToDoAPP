@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using ToDoApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+//DI pre LocalStorageNuget
+builder.Services.AddBlazoredLocalStorage();
 
 var app = builder.Build();
 
