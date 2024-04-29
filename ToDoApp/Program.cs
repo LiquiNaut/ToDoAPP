@@ -1,5 +1,6 @@
 using Blazored.LocalStorage;
 using ToDoApp.Components;
+using ToDoApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddRazorComponents()
 
 //DI pre LocalStorageNuget
 builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddScoped<TodoService>();
 
 var app = builder.Build();
 
